@@ -33,6 +33,9 @@ public class sumTowDiagonalMatrix {
         for(int i=0; i<size;i++){
             sum += matrix[i][i] + matrix[i][size-1-i];
         }
+        if (size%2 == 1){
+            sum = sum - matrix[(size-1)/2][(size-1)/2];
+        }
         System.out.println("Sum Numbers in Tow Diagonal os Matrix is: "+sum);
     }
 }
